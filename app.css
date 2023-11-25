@@ -229,6 +229,19 @@ div.notifications {
   font-size: 12px;
   border-radius: 5px;
 }
+
+.mail_info p:first-of-type {
+  font-size: 13px;
+  font-weight: 500;
+}
+.mail_info > div {
+  display: block;
+  padding: 8px;
+  line-height: 120%;
+}
+.mail_info p {
+  font-size: 12px;
+}
 /* Code For mobile device notification */
 .login_name_mobile {
   display: none;
