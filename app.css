@@ -90,6 +90,9 @@ div.notifications {
 .notifyShow {
   display: block;
 }
+.login_drpdnn_show {
+  display: block !important;
+}
 .notify_label {
   display: flex;
   align-items: center;
@@ -141,9 +144,11 @@ div.notifications {
   border: 1px solid #dbdbdb;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
   border-radius: 14px;
-  overflow-y: none !important;
+  /* overflow-y: none !important; */
   overflow-x: hidden;
+  display: none;
 }
+/* //toggle-func-for-display */
 .login_details {
   display: flex;
   justify-content: space-between;
@@ -640,3 +645,13 @@ div.hero-layout {
   border: 1px solid #005bd3;
 }
 /* border: 1px solid #005BD3; */
+
+.more_nav a:hover {
+  background: #f7f7f7;
+}
+.more_nav a:active {
+  background: #f0f0f0;
+}
+.more_nav a:focus {
+  outline: 2px solid #005bd3;
+}

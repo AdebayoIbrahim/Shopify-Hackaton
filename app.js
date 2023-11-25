@@ -162,3 +162,12 @@ const notifyBar = document.querySelector(".notify");
 notifyBell.addEventListener("click", () => {
   notifyBar.classList.toggle("notifyShow");
 });
+
+// login-dropdown
+const login_dropdwn = document.querySelector(".login_dropdwn");
+const login_info = document.querySelector(".login_info");
+login_info.addEventListener("click", () => {
+  console.log("clicked");
+  console.log(login_dropdwn);
+  login_dropdwn.classList.toggle("login_drpdnn_show");
+});
