@@ -1,0 +1,553 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #e3e3e3;
+  font-family: Inter;
+}
+
+/* nav-styling */
+nav {
+  width: 100%;
+  background: #1c181d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+.logo > a {
+  color: white;
+}
+/* search-box */
+.search_box {
+  position: relative;
+  flex: 0.8;
+}
+.search_box > input[type="text"] {
+  width: 100%;
+  padding: 0.45rem 2.3rem;
+  outline: none;
+  border-radius: 8px;
+  background: #322f33;
+  /* border: none; */
+  border: 1px solid #616161;
+  color: white;
+}
+.search_box > input::placeholder {
+  color: #b5b5b5;
+  font-family: Inter;
+}
+.search_icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* notifications */
+div.notifications {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  /* justify-content: space-between; */
+}
+.notifications_bell {
+  /* background: #322f33; */
+  padding: 6px;
+  border-radius: 8px;
+  vertical-align: middle;
+  cursor: pointer;
+  /* outline: 2px solid transparent; */
+  /* box-shadow: 0px 0px 0px 1.5px transparent, 0px 0px 0px 3px transparent,
+    0px 0px 0px 2px #005bd3; */
+}
+/* //for-nav-toggle */
+
+.notify {
+  background: #ffffff;
+  position: absolute;
+  top: 75px;
+  right: 20px;
+  z-index: 100;
+  width: 380px;
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 14px;
+  display: none;
+}
+
+.notifyShow {
+  display: block;
+}
+.notify_label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.notify_label > div:first-of-type {
+  font-size: 14px;
+  font-weight: 500;
+}
+.notify_buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.notify_buttons > button:not(:last-of-type) {
+  padding: 3px;
+}
+.notify_buttons > button {
+  all: unset;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  background: transparent;
+  border: 1px solid transparent;
+}
+.notifies {
+  padding-top: 20px;
+}
+.notifies_text {
+  padding: 12px;
+  font-size: 13px;
+  text-align: center;
+  font-weight: 500;
+  color: #616161;
+  background: #e3e3e3;
+}
+.login_name {
+  color: #e3e3e3;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.login_name p {
+  font-size: 12px;
+  line-height: 130%;
+  background: #322f33;
+  border-radius: 8px;
+  padding: 10px 35px 10px 8px;
+  /* outline: 2px solid transparent; */
+}
+
+.login_logo {
+  position: absolute;
+  right: 2px;
+  bottom: 6px;
+  color: #322f33;
+  background: #36fba1;
+  display: inline;
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+/* Code For mobile device notification */
+.login_name_mobile {
+  display: none;
+  cursor: pointer;
+}
+.login_name_mobile .login_logo_mobile {
+  color: #322f33;
+  background: #36fba1;
+  display: inline;
+  padding: 8px 6px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+/* ends here */
+
+/* hero-layouts */
+div.hero-layout {
+  margin: 1.4rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+}
+
+.trial_tip > .trial_text {
+  font-size: 13px;
+  color: #ebebeb;
+  font-weight: 500;
+}
+.trial_tip {
+  background: #1c181d;
+  color: #e3e3e3;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.trial_tip .trial_text {
+  font-size: 15px;
+}
+.trial_tip button {
+  color: #322f33;
+  background: #ffffff;
+  border: none;
+  outline: none;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  font-size: 12px;
+  font-family: Inter;
+  font-weight: bold;
+  cursor: pointer;
+}
+.trial_btn_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+/* Main-Layout */
+
+.main-hero {
+  background: #ffffff;
+  margin-top: 1em;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 18px;
+}
+.main-hero .set_up_guide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding-left: 0.85rem; */
+}
+.set_up_guide h5 {
+  font-size: 14px;
+}
+.tip_guide {
+  padding-top: 3px;
+  margin-top: 3px;
+  font-size: 13px;
+}
+.progress-tracker {
+  /* padding-left: 0.85rem; */
+  padding-top: 8px;
+  margin-top: 5px;
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+}
+.progress-tracker_count {
+  font-size: 12px;
+}
+.bar_tracker {
+  background: #e3e3e3;
+  width: 72px;
+  height: 4px;
+  position: relative;
+  border-radius: 28px;
+}
+.progress_bar {
+  position: absolute;
+  width: 5%;
+  height: inherit;
+  background: #1c181d;
+  border-radius: inherit;
+  transition: all 350ms ease-in-out;
+}
+#toggle_expand {
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  transform: rotate(0.5turn);
+}
+
+/* toggle-class-for-expanding-button */
+.rotate_toggle {
+  transform: rotate(0deg) !important;
+}
+
+/* option_fields */
+.option_fields_general {
+  padding-top: 1.2em;
+  /* padding-bottom: 0.8rem; */
+  display: block;
+}
+/* toggle-class-for-option_fields_general */
+.toggle_display {
+  display: none;
+}
+
+/* option-1 */
+.option1_wrapper {
+  /* background: #e3e3e3; */
+  padding-top: 0.5rem;
+  padding-inline-start: 0.5rem;
+  padding-inline-end: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 2px;
+}
+
+.option1_wrapper:last-of-type {
+  padding-bottom: 1rem;
+}
+.option1_wrapper:hover {
+  background: #e3e3e3;
+}
+/* .option1_wrapper:last-of-type {
+  padding-bottom: 5px !important;
+} */
+.add_bg {
+  background: #e3e3e3;
+}
+/* @keyframes Wrap {
+  from {
+    opacity: 0;
+    transform: scaleY(-40deg);
+  }
+  to {
+    opacity: 0.5;
+    transform: scale(0deg);
+  }
+} */
+.option_1_index {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  /* animation: Wrap 400ms ease-in-out; */
+}
+
+.option_label {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.svg_input {
+  cursor: pointer;
+}
+.svg_input:hover #crc {
+  stroke-dasharray: 0;
+}
+
+/* latly-checked- */
+.lastchecked {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+.rolling_svg {
+  display: none;
+  animation: roller 300ms ease-in-out 1;
+}
+@keyframes roller {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+.scale {
+  animation: scale 300ms ease-in-out 1;
+}
+@keyframes scale {
+  from {
+    scale: 0.6;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+/* for-checked-btn toggle */
+.roll {
+  display: block;
+}
+.fade_in {
+  display: none;
+}
+.helper_box {
+  display: none;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-left: calc(30px + 3px);
+  padding-top: 0.2rem;
+}
+.opt_one {
+  display: flex;
+}
+/* .opt_two {
+  display: none;
+}
+.opt_three {
+  display: none;
+}
+.opt_four {
+  display: none;
+}
+.opt_five {
+  display: none;
+} */
+/* .helper_text {
+  /* padding-left: calc(30px + 3px); 
+} */
+.helper_text_p {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+/* learn-more-button */
+.learn_more {
+  /* display: block; */
+  /* padding-top: 0.2rem; */
+  color: #005bd3;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.action_btn {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+.action_btn > a {
+  /* all: unset; */
+  display: inline-block;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 600;
+  color: #ffffff;
+  background: #404040;
+  padding: 0.375rem 0.75rem;
+  border-width: 1.5px 1.5px 0px 1.5px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 2px 0px #000000, 0px 1px 0px 1.5px #333333,
+    0px 0px 0px 1.5px #333333;
+  border-radius: 6px;
+  user-select: none;
+}
+
+.import_flex > a:last-of-type {
+  background: transparent;
+  color: black;
+  border-color: transparent;
+  box-shadow: unset;
+}
+
+:is(.import_flex > a:last-of-type):hover {
+  background: #fafafa;
+  border-color: #ffffff;
+}
+.display_images {
+  position: relative;
+}
+.display_images > img {
+  margin-top: -30px;
+}
+/* .display_images > img {
+  height: 7.8rem;
+} */
+/* .gutter_image {
+  background: linear-gradient(0deg, #f3f3f3, #fff, #f3f3f3, #fff 60%, #fff0);
+  position: absolute;
+  bottom: 0;
+  height: 10%;
+  right: 14px;
+  z-index: 1000;
+  width: 135px;
+} */
+/* #656626 */
+
+/* Event-States-For-buttons */
+.login_info:hover .login_name > p {
+  background: #616161;
+}
+/* pressed-state */
+.login_info:active .login_name > p {
+  background: #656266;
+}
+.login_info:focus {
+  outline: none;
+}
+/* focused-state */
+.login_info:focus .login_name > p {
+  outline: none;
+  /* outline: 2px solid #005bd3; */
+  box-shadow: 0px 0px 0px 1.5px transparent, 0px 0px 0px 3px transparent,
+    0px 0px 0px 2px #005bd3;
+  background: #656266;
+}
+
+/* input-search-box-states */
+.search_box > input[type="text"]:hover {
+  background: #322f33;
+  border: 1px solid #e1e1e1;
+}
+.search_box > input[type="text"]:active {
+  background: #322f33;
+  border: 2px solid #ffffff;
+}
+.search_box > input[type="text"]:focus {
+  background: #322f33;
+  border: 2px solid #ffffff;
+}
+
+.action_btn > a:first-child:hover {
+  background: #2a2a2a;
+}
+.action_btn > a:first-child:active {
+  background: #2b2b2b;
+  box-shadow: 0px 0px 0px 1.5px #333333, inset 0px 3px 0px #000000;
+}
+.action_btn > a:first-child:focus {
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 0px 1.5px #333333, 0px 0px 0px 3px #ffffff,
+    0px 0px 0px 5px #005bd3;
+}
+.notifications_bell:hover {
+  background: #616161;
+}
+
+.notifications_bell:active {
+  background: #656266;
+}
+
+.notifications_bell:focus {
+  outline: none; /* Remove the default focus outline */
+  /* outline: 2px solid #005bd3; */
+  box-shadow: 0px 0px 0px 1.5px transparent, 0px 0px 0px 3px transparent,
+    0px 0px 0px 2px #005bd3;
+  background: #656266;
+}
+
+.notify_buttons > button:hover,
+.notify_buttons > button:active {
+  background: #f0f0f0;
+}
+.notify_buttons > button:focus,
+.notify_buttons > button:focus-within {
+  border: 1px solid #005bd3;
+}
+/* border: 1px solid #005BD3; */
