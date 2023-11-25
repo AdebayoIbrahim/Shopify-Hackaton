@@ -71,7 +71,7 @@ const rolling_svg = document.querySelector(".rolling_svg");
 
 let i = 0;
 const progress_status = document.querySelector(".progress_bar");
-progress_status.style.width = i + "%";
+// progress_status.style.width = i + "%";
 const countStatus = document.getElementById("count");
 countStatus.innerText = 0;
 statusProgress = Number(countStatus.textContent);
@@ -99,7 +99,7 @@ function animationEndHandler(rolling_svg, circle, roll_path, isClicked) {
     i += 20;
     statusProgress += 1;
     countStatus.innerText = statusProgress;
-    progress_status.style.width = i + "%";
+    progress_status.style.width = statusProgress * 20 + "%";
     console.log("incremented Val: ", i);
   }
 }
@@ -118,6 +118,7 @@ svg_input.forEach((svg_input) => {
     rolling_svg.classList.toggle("roll");
     initial_hov.classList.toggle("fade_in");
 
+    statusProgress == -1 && (statusProgress = 1);
     // Remove the event listener before adding it again
     rolling_svg.removeEventListener("animationend", animationEndHandler);
     // Add the animationend event listener
@@ -135,7 +136,7 @@ svg_input.forEach((svg_input) => {
       isClicked = false;
       i -= 20;
       statusProgress -= 1;
-      progress_status.style.width = i + "%";
+      progress_status.style.width = statusProgress * 20 + "%";
       countStatus.innerText = statusProgress;
 
       console.log("Decrement :", i);
@@ -188,3 +189,15 @@ const trial_tip = document.querySelector(".trial_tip");
 del.onclick = function () {
   trial_tip.style.display = "none";
 };
+
+const setTab = document.querySelectorAll(".initial_hov");
+setTab.forEach((tabindex) => {
+  tabindex.setAttribute("tabindex", "0");
+});
+
+// all-link-should-be-open-in-a-new-tab
+const allLink = document.querySelectorAll("a");
+// console.log(allLink.length);
+for (i = 0; i < allLink.length; i++) {
+  allLink[i].setAttribute("target", "blank");
+}

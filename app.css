@@ -355,15 +355,18 @@ div.hero-layout {
 }
 .progress_bar {
   position: absolute;
-  width: 5%;
+  /* width: 5%; */
   height: inherit;
   background: #1c181d;
   border-radius: inherit;
   transition: all 350ms ease-in-out;
 }
 #toggle_expand {
+  background: transparent;
+  padding: 4px;
   cursor: pointer;
-  transition: all 200ms ease-in-out;
+  border-radius: 8px;
+  transition: transform 200ms ease-in-out;
   transform: rotate(0.5turn);
 }
 
@@ -585,7 +588,7 @@ div.hero-layout {
   outline: none;
 }
 /* focused-state */
-.login_info:focus .login_name > p {
+.login_info:focus-visible .login_name > p {
   outline: none;
   /* outline: 2px solid #005bd3; */
   box-shadow: 0px 0px 0px 1.5px transparent, 0px 0px 0px 3px transparent,
@@ -602,7 +605,7 @@ div.hero-layout {
   background: #322f33;
   border: 2px solid #ffffff;
 }
-.search_box > input[type="text"]:focus {
+.search_box > input[type="text"]:focus-visible {
   background: #322f33;
   border: 2px solid #ffffff;
 }
@@ -614,7 +617,7 @@ div.hero-layout {
   background: #2b2b2b;
   box-shadow: 0px 0px 0px 1.5px #333333, inset 0px 3px 0px #000000;
 }
-.action_btn > a:first-child:focus {
+.action_btn > a:first-child:focus-visible {
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0px 0px 0px 1.5px #333333, 0px 0px 0px 3px #ffffff,
@@ -628,7 +631,7 @@ div.hero-layout {
   background: #656266;
 }
 
-.notifications_bell:focus {
+.notifications_bell:focus-visible {
   outline: none; /* Remove the default focus outline */
   /* outline: 2px solid #005bd3; */
   box-shadow: 0px 0px 0px 1.5px transparent, 0px 0px 0px 3px transparent,
@@ -640,8 +643,8 @@ div.hero-layout {
 .notify_buttons > button:active {
   background: #f0f0f0;
 }
-.notify_buttons > button:focus,
-.notify_buttons > button:focus-within {
+.notify_buttons > button:focus-visible,
+.notify_buttons > button:focus-visible {
   border: 1px solid #005bd3;
 }
 /* border: 1px solid #005BD3; */
@@ -654,11 +657,23 @@ div.hero-layout {
 .all_stores:active {
   background: #f0f0f0;
 }
-.more_nav a:focus,
-.all_stores:focus {
+.more_nav a:focus-visible,
+.all_stores:focus-visible {
   outline: 2px solid #005bd3;
 }
-#plan:focus {
+
+#plan:hover {
+  background: #f0f0f0;
+}
+
+#plan:active {
+  box-shadow: 0rem 0.125rem 0.0625rem 0rem #1a1a1a33 inset,
+    0.0625rem 0rem 0.0625rem 0rem #1a1a1a1f inset,
+    -0.0625rem 0rem 0.0625rem 0rem #1a1a1a1f inset;
+  background: #f7f7f7;
+}
+
+#plan:focus-visible {
   box-shadow: 0px 0px 0px 1.5px transparent, 0px 0px 0px 3px transparent,
     0px 0px 0px 3px #005bd3;
 }
@@ -669,10 +684,34 @@ div.hero-layout {
   fill: #fff;
   transition: fill 350ms ease-in-out;
 }
-#del:hover {
+#del:hover,
+#del:active {
   fill: #e0f0ff;
 }
 
-#del:focus {
+#toggle_expand:hover,
+#toggle_expand:active {
+  background: #e3e3e3;
+}
+
+#del:focus,
+#toggle_expand:focus {
+  outline: none;
+}
+
+#del:focus-visible,
+#toggle_expand:focus-visible {
+  outline: 2px solid #005bd3;
+}
+.initial_hov,
+.rolling_svg {
+  background: transparent;
+  border-radius: 4px;
+  /* padding: 3px; */
+}
+.initial_hov:focus {
+  outline: none;
+}
+.initial_hov:focus-visible {
   outline: 2px solid #005bd3;
 }
