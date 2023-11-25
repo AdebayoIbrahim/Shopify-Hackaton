@@ -177,3 +177,14 @@ all_stores.onclick = function () {
   // console.log("clicked!!");
   window.open("https://admin.shopify.com");
 };
+
+const plan = document.querySelector("#plan");
+plan.onclick = function () {
+  window.open("https://shopify.com/pricing");
+};
+
+const del = document.getElementById("del");
+const trial_tip = document.querySelector(".trial_tip");
+del.onclick = function () {
+  trial_tip.style.display = "none";
+};
