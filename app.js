@@ -167,7 +167,13 @@ notifyBell.addEventListener("click", () => {
 const login_dropdwn = document.querySelector(".login_dropdwn");
 const login_info = document.querySelector(".login_info");
 login_info.addEventListener("click", () => {
-  console.log("clicked");
-  console.log(login_dropdwn);
+  // console.log(login_dropdwn);
   login_dropdwn.classList.toggle("login_drpdnn_show");
 });
+
+// all-stores
+const all_stores = document.querySelector(".all_stores");
+all_stores.onclick = function () {
+  // console.log("clicked!!");
+  window.open("https://admin.shopify.com");
+};

@@ -646,12 +646,15 @@ div.hero-layout {
 }
 /* border: 1px solid #005BD3; */
 
-.more_nav a:hover {
+.more_nav a:hover,
+.all_stores:hover {
   background: #f7f7f7;
 }
-.more_nav a:active {
+.more_nav a:active,
+.all_stores:active {
   background: #f0f0f0;
 }
-.more_nav a:focus {
+.more_nav a:focus,
+.all_stores:focus {
   outline: 2px solid #005bd3;
 }
