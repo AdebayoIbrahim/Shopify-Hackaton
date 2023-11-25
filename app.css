@@ -658,3 +658,21 @@ div.hero-layout {
 .all_stores:focus {
   outline: 2px solid #005bd3;
 }
+#plan:focus {
+  box-shadow: 0px 0px 0px 1.5px transparent, 0px 0px 0px 3px transparent,
+    0px 0px 0px 3px #005bd3;
+}
+#del {
+  /* padding: px; */
+  background: transparent;
+  border-radius: 3px;
+  fill: #fff;
+  transition: fill 350ms ease-in-out;
+}
+#del:hover {
+  fill: #e0f0ff;
+}
+
+#del:focus {
+  outline: 2px solid #005bd3;
+}
