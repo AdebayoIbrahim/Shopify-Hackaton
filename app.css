@@ -5,15 +5,32 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* pallete */
+:root {
+  --grey-50: #656266;
+  --grey-100: #616161;
+  --grey-200: #322f33;
+  --grey-300: #1c181d;
+  --light: #e3e3e3;
+  --stroke-50: #ebebeb;
+  /* --mid: #616161; */
+  /* --dark: #475467; */
+  --white: #ffffff;
+  --pressed: #f0f0f0;
+  --hover: #f7f7f7;
+  --focused-outline: #005bd3;
+  --bg: #f1f1f1;
+}
+
 body {
-  background: #e3e3e3;
+  background: var(--bg);
   font-family: Inter;
 }
 
 /* nav-styling */
 nav {
   width: 100%;
-  background: #1c181d;
+  background: var(--grey-300);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +41,7 @@ a {
   text-decoration: none;
 }
 .logo > a {
-  color: white;
+  color: var(--white);
 }
 /* search-box */
 .search_box {
@@ -37,9 +54,9 @@ a {
   padding: 0.45rem 2.3rem;
   outline: none;
   border-radius: 8px;
-  background: #322f33;
+  background: var(--grey-200);
   /* border: none; */
-  border: 1px solid #616161;
+  border: 1px solid var(--grey-100);
   color: white;
 }
 .search_box > input::placeholder {
@@ -62,26 +79,26 @@ div.notifications {
   /* justify-content: space-between; */
 }
 .notifications_bell {
-  /* background: #322f33; */
+  /* background: var(--grey-200); */
   padding: 6px;
   border-radius: 8px;
   vertical-align: middle;
   cursor: pointer;
   /* outline: 2px solid transparent; */
   /* box-shadow: 0px 0px 0px 1.5px transparent, 0px 0px 0px 3px transparent,
-    0px 0px 0px 2px #005bd3; */
+    0px 0px 0px 2px var(--focused-outline); */
 }
 /* //for-nav-toggle */
 
 .notify {
-  background: #ffffff;
+  background: var(--white);
   position: absolute;
   top: 75px;
   right: 20px;
   z-index: 100;
   width: 380px;
   padding: 15px;
-  background: #ffffff;
+  background: var(--white);
   border: 1px solid #dbdbdb;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
   border-radius: 14px;
@@ -128,20 +145,20 @@ div.notifications {
   font-size: 13px;
   text-align: center;
   font-weight: 500;
-  color: #616161;
-  background: #e3e3e3;
+  color: var(--grey-100);
+  background: var(--light);
 }
 
 /* login-dropdown */
 .login_dropdwn {
-  background: #ffffff;
+  background: var(--white);
   position: absolute;
   top: 75px;
   right: 20px;
   z-index: 100;
   width: 380px;
   padding: 8px;
-  background: #ffffff;
+  background: var(--white);
   border: 1px solid #dbdbdb;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
   border-radius: 14px;
@@ -154,7 +171,7 @@ div.notifications {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #e3e3e3;
+  background: var(--light);
   padding: 8px;
   border-radius: 14px;
 }
@@ -180,7 +197,7 @@ div.notifications {
   cursor: pointer;
   align-items: center;
   gap: 5px;
-  /* background: #e3e3e3; */
+  /* background: var(--light); */
   padding: 6px;
 }
 .stroke_line {
@@ -195,7 +212,7 @@ div.notifications {
   color: #303030;
 }
 .login_name {
-  color: #e3e3e3;
+  color: var(--light);
   position: relative;
   display: block;
   cursor: pointer;
@@ -203,7 +220,7 @@ div.notifications {
 .login_name p {
   font-size: 12px;
   line-height: 130%;
-  background: #322f33;
+  background: var(--grey-200);
   border-radius: 8px;
   padding: 10px 35px 10px 8px;
   /* outline: 2px solid transparent; */
@@ -228,7 +245,7 @@ div.notifications {
   position: absolute;
   right: 2px;
   bottom: 6px;
-  color: #322f33;
+  color: var(--grey-200);
   background: #36fba1;
   display: inline;
   padding: 5px;
@@ -254,7 +271,7 @@ div.notifications {
   cursor: pointer;
 }
 .login_logo_mobile {
-  color: #322f33;
+  color: var(--grey-200);
   background: #36fba1;
   display: inline;
   padding: 8px 6px;
@@ -275,12 +292,12 @@ div.notifications {
 
 .trial_tip > .trial_text {
   font-size: 13px;
-  color: #ebebeb;
+  color: var(--stroke-50);
   font-weight: 500;
 }
 .trial_tip {
-  background: #1c181d;
-  color: #e3e3e3;
+  background: var(--grey-300);
+  color: var(--light);
   padding: 0.6rem 0.9rem;
   border-radius: 8px;
   display: flex;
@@ -294,8 +311,8 @@ div.notifications {
   font-size: 15px;
 }
 .trial_tip button {
-  color: #322f33;
-  background: #ffffff;
+  color: var(--grey-200);
+  background: var(--white);
   border: none;
   outline: none;
   padding: 0.5rem 0.5rem;
@@ -316,7 +333,7 @@ div.notifications {
 /* Main-Layout */
 
 .main-hero {
-  background: #ffffff;
+  background: var(--white);
   margin-top: 1em;
   padding: 1rem;
   width: 100%;
@@ -349,7 +366,7 @@ div.notifications {
   font-size: 12px;
 }
 .bar_tracker {
-  background: #e3e3e3;
+  background: var(--light);
   width: 72px;
   height: 4px;
   position: relative;
@@ -359,7 +376,7 @@ div.notifications {
   position: absolute;
   /* width: 5%; */
   height: inherit;
-  background: #1c181d;
+  background: var(--grey-300);
   border-radius: inherit;
   transition: all 350ms ease-in-out;
 }
@@ -390,7 +407,7 @@ div.notifications {
 
 /* option-1 */
 .option1_wrapper {
-  /* background: #e3e3e3; */
+  /* background: var(--light); */
   padding-top: 0.5rem;
   padding-inline-start: 0.5rem;
   padding-inline-end: 0.5rem;
@@ -442,6 +459,7 @@ div.notifications {
 }
 .svg_input:hover #crc {
   stroke-dasharray: 0;
+  fill: var(--light);
 }
 
 /* latly-checked- */
@@ -518,7 +536,7 @@ div.notifications {
 .learn_more {
   /* display: block; */
   /* padding-top: 0.2rem; */
-  color: #005bd3;
+  color: var(--focused-outline);
   font-size: 14px;
   font-weight: bold;
 }
@@ -535,7 +553,7 @@ div.notifications {
   font-size: 12px;
   text-align: center;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--white);
   background: #404040;
   padding: 0.375rem 0.75rem;
   border-width: 1.5px 1.5px 0px 1.5px;
@@ -554,9 +572,12 @@ div.notifications {
   box-shadow: unset;
 }
 
-:is(.import_flex > a:last-of-type):hover {
-  background: #fafafa;
-  border-color: #ffffff;
+/* Only device with mouse-hover */
+@media (hover) {
+  :is(.import_flex > a:last-of-type):hover {
+    background: #fafafa;
+    border-color: var(--white);
+  }
 }
 .display_images {
   position: relative;
@@ -575,12 +596,14 @@ div.notifications {
 /* #656626 */
 
 /* Event-States-For-buttons */
-.login_info:hover .login_name > p {
-  background: #616161;
+@media (hover) {
+  .login_info:hover .login_name > p {
+    background: var(--grey-100);
+  }
 }
 /* pressed-state */
 .login_info:active .login_name > p {
-  background: #656266;
+  background: var(--grey-50);
 }
 .login_info:focus {
   outline: none;
@@ -588,33 +611,37 @@ div.notifications {
 /* focused-state */
 .login_info:focus-visible .login_name > p {
   outline: none;
-  /* outline: 2px solid #005bd3; */
+  /* outline: 2px solid var(--focused-outline); */
   box-shadow: 0px 0px 0px 1.5px transparent, 0px 0px 0px 3px transparent,
-    0px 0px 0px 2px #005bd3;
-  background: #656266;
+    0px 0px 0px 2px var(--focused-outline);
+  background: var(--grey-50);
 }
 
 .login_info:focus-visible .login_logo_mobile {
   box-shadow: 0px 0px 0px 1.5px transparent, 0px 0px 0px 3px transparent,
-    0px 0px 0px 2px #005bd3;
-  /* background: #656266; */
+    0px 0px 0px 2px var(--focused-outline);
+  /* background: var(--grey-50); */
 }
 /* input-search-box-states */
-.search_box > input[type="text"]:hover {
-  background: #322f33;
-  border: 1px solid #e1e1e1;
+@media (hover) {
+  .search_box > input[type="text"]:hover {
+    background: var(--grey-200);
+    border: 1px solid #e1e1e1;
+  }
 }
 .search_box > input[type="text"]:active {
-  background: #322f33;
-  border: 2px solid #ffffff;
+  background: var(--grey-200);
+  border: 2px solid var(--white);
 }
 .search_box > input[type="text"]:focus-visible {
-  background: #322f33;
-  border: 2px solid #ffffff;
+  background: var(--grey-200);
+  border: 2px solid var(--white);
 }
 
-.action_btn > a:first-child:hover {
-  background: #2a2a2a;
+@media (hover) {
+  .action_btn > a:first-child:hover {
+    background: #2a2a2a;
+  }
 }
 .action_btn > a:first-child:active {
   background: #2b2b2b;
@@ -623,62 +650,70 @@ div.notifications {
 .action_btn > a:first-child:focus-visible {
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 0px 0px 1.5px #333333, 0px 0px 0px 3px #ffffff,
-    0px 0px 0px 5px #005bd3;
+  box-shadow: 0px 0px 0px 1.5px #333333, 0px 0px 0px 3px var(--white),
+    0px 0px 0px 5px var(--focused-outline);
 }
-.notifications_bell:hover {
-  background: #616161;
+
+@media (hover) {
+  .notifications_bell:hover {
+    background: var(--grey-100);
+  }
 }
 
 .notifications_bell:active {
-  background: #656266;
+  background: var(--grey-50);
 }
 
 .notifications_bell:focus-visible {
   outline: none; /* Remove the default focus outline */
-  /* outline: 2px solid #005bd3; */
+  /* outline: 2px solid var(--focused-outline); */
   box-shadow: 0px 0px 0px 1.5px transparent, 0px 0px 0px 3px transparent,
-    0px 0px 0px 2px #005bd3;
-  background: #656266;
+    0px 0px 0px 2px var(--focused-outline);
+  background: var(--grey-50);
 }
 
-.notify_buttons > button:hover,
-.notify_buttons > button:active {
-  background: #f0f0f0;
+@media (hover) {
+  .notify_buttons > button:hover,
+  .notify_buttons > button:active {
+    background: var(--pressed);
+  }
 }
 .notify_buttons > button:focus-visible,
 .notify_buttons > button:focus-visible {
-  border: 1px solid #005bd3;
+  border: 1px solid var(--focused-outline);
 }
 /* border: 1px solid #005BD3; */
-
-.more_nav a:hover,
-.all_stores:hover {
-  background: #f7f7f7;
+@media (hover) {
+  .more_nav a:hover,
+  .all_stores:hover {
+    background: var(--hover);
+  }
 }
 .more_nav a:active,
 .all_stores:active {
-  background: #f0f0f0;
+  background: var(--pressed);
 }
 .more_nav a:focus-visible,
 .all_stores:focus-visible {
-  outline: 2px solid #005bd3;
+  outline: 2px solid var(--focused-outline);
 }
 
-#plan:hover {
-  background: #f0f0f0;
+@media (hover) {
+  #plan:hover {
+    background: var(--pressed);
+  }
 }
 
 #plan:active {
   box-shadow: 0rem 0.125rem 0.0625rem 0rem #1a1a1a33 inset,
     0.0625rem 0rem 0.0625rem 0rem #1a1a1a1f inset,
     -0.0625rem 0rem 0.0625rem 0rem #1a1a1a1f inset;
-  background: #f7f7f7;
+  background: var(--hover);
 }
 
 #plan:focus-visible {
   box-shadow: 0px 0px 0px 1.5px transparent, 0px 0px 0px 3px transparent,
-    0px 0px 0px 3px #005bd3;
+    0px 0px 0px 3px var(--focused-outline);
 }
 #del {
   /* padding: px; */
@@ -687,16 +722,26 @@ div.notifications {
   fill: #fff;
   transition: fill 350ms ease-in-out;
 }
-#del:hover,
-#del:active {
-  fill: #e0f0ff;
+
+@media (hover) {
+  #del:hover,
+  #del:active {
+    fill: #e0f0ff;
+  }
 }
 
-#toggle_expand:hover,
-#toggle_expand:active {
-  background: #e3e3e3;
+@media (hover) {
+  #toggle_expand:hover,
+  #toggle_expand:active {
+    background: var(--light);
+  }
 }
 
+@media (hover) {
+  .learn_more:hover {
+    text-decoration: underline;
+  }
+}
 #del:focus,
 #toggle_expand:focus {
   outline: none;
@@ -704,7 +749,7 @@ div.notifications {
 
 #del:focus-visible,
 #toggle_expand:focus-visible {
-  outline: 2px solid #005bd3;
+  outline: 2px solid var(--focused-outline);
 }
 .initial_hov,
 .rolling_svg {
@@ -716,7 +761,7 @@ div.notifications {
   outline: none;
 }
 .initial_hov:focus-visible {
-  outline: 2px solid #005bd3;
+  outline: 2px solid var(--focused-outline);
 }
 
 /* Responsiveness */

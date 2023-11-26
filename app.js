@@ -1,6 +1,7 @@
 const toggleExpandBtn = document.querySelector("#toggle_expand");
 const generalOptions = document.querySelector(".option_fields_general");
 
+// Toggle-expand-button-click
 function toggleFunc() {
   toggleExpandBtn.classList.toggle("rotate_toggle");
   generalOptions.classList.toggle("toggle_display");
@@ -41,6 +42,7 @@ const roll_attr = {
 const originalRollAttr = { ...roll_attr };
 
 // stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"
+// these are the previous/default svg attributes , the Objextive is to switch their attributes based on paths
 const prevPathAttr = {
   "fill-rule": "",
   "clip-rule": "",
@@ -51,9 +53,9 @@ const prevPathAttr = {
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
 };
+//these function reset the attributes
 function resetAttributes(roll_path, circle) {
   // const circle = document.getElementById("circle");
-
   const attributesToRemove = [
     "cx",
     "cy",
@@ -151,6 +153,7 @@ function optionCheck(e) {
   }
 }
 
+//selecting-or-looping-through-the-svgs-inputs-to-perform-diff-states
 const svg_input = document.querySelectorAll(".svg_input");
 svg_input.forEach((svg_input) => {
   svg_input.addEventListener("keydown", (e) => {
@@ -239,6 +242,7 @@ for (i = 0; i < allLink.length; i++) {
   allLink[i].setAttribute("target", "blank");
 }
 
+//when i click anywhere other than the buttons -it should remove the display blocks
 window.addEventListener("click", (e) => {
   if (!e.target.matches(".Davii")) {
     login_dropdwn.classList.contains("login_drpdnn_show") &&
@@ -252,3 +256,8 @@ function clickNotify(e) {
       notifyBar.classList.remove("notifyShow");
   }
 }
+
+// Wishing My Self LUCK Within the time-range-managed-to-submit-something!!
+//NAME: Abdulmumeen Ibrahim
+//Twitter: @ibrahimSetup
+//github:github.com/adebayoibrahim
