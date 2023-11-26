@@ -244,4 +244,11 @@ window.addEventListener("click", (e) => {
     login_dropdwn.classList.contains("login_drpdnn_show") &&
       login_dropdwn.classList.remove("login_drpdnn_show");
   }
+  clickNotify(e);
 });
+function clickNotify(e) {
+  if (!e.target.matches(".notifications_svg")) {
+    notifyBar.classList.toggle("notifyShow") &&
+      notifyBar.classList.remove("notifyShow");
+  }
+}
