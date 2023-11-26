@@ -238,3 +238,10 @@ const allLink = document.querySelectorAll("a");
 for (i = 0; i < allLink.length; i++) {
   allLink[i].setAttribute("target", "blank");
 }
+
+window.addEventListener("click", (e) => {
+  if (!e.target.matches(".Davii")) {
+    login_dropdwn.classList.contains("login_drpdnn_show") &&
+      login_dropdwn.classList.remove("login_drpdnn_show");
+  }
+});

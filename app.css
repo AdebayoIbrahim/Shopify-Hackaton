@@ -781,6 +781,10 @@ div.notifications {
   html {
     font-size: 90%;
   }
+  .login_dropdwn,
+  .notify {
+    width: 350px;
+  }
 }
 
 @media only screen and (max-width: 515px) {
