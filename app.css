@@ -29,7 +29,8 @@ a {
 /* search-box */
 .search_box {
   position: relative;
-  flex: 0.8;
+  /* flex: 0.8; */
+  width: 490px;
 }
 .search_box > input[type="text"] {
   width: 100%;
@@ -263,13 +264,13 @@ div.notifications {
 /* ends here */
 
 /* hero-layouts */
-div.hero-layout {
+.hero-layout {
   margin: 1.4rem auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 700px;
+  max-width: 800px;
 }
 
 .trial_tip > .trial_text {
@@ -285,6 +286,7 @@ div.hero-layout {
   display: flex;
   width: 100%;
   align-items: center;
+  text-align: left;
   justify-content: space-between;
 }
 
@@ -596,6 +598,11 @@ div.hero-layout {
   background: #656266;
 }
 
+.login_info:focus-visible .login_logo_mobile {
+  box-shadow: 0px 0px 0px 1.5px transparent, 0px 0px 0px 3px transparent,
+    0px 0px 0px 2px #005bd3;
+  /* background: #656266; */
+}
 /* input-search-box-states */
 .search_box > input[type="text"]:hover {
   background: #322f33;
@@ -714,4 +721,79 @@ div.hero-layout {
 }
 .initial_hov:focus-visible {
   outline: 2px solid #005bd3;
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 820px) {
+  .login_name {
+    display: none;
+  }
+  .login_name_mobile {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .search_box {
+    width: unset;
+    flex: 0.9;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hide {
+    display: none;
+  }
+  .display_images {
+    display: none;
+  }
+  .helper_box {
+    margin-bottom: 5px;
+  }
+  .option1_wrapper:last-of-type {
+    padding-bottom: calc(1rem - 0.5rem);
+  }
+  .trial_tip {
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    align-items: start;
+    row-gap: 16px;
+    column-gap: 0px;
+    position: relative;
+  }
+  #del {
+    position: absolute;
+    right: 0;
+    top: 30%;
+    margin-right: 0.9rem;
+    transform: translate(-50%, -50%);
+  }
+  .trial_tip,
+  .main-hero {
+    border-radius: unset;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .hide {
+    display: none;
+  }
+  html {
+    font-size: 90%;
+  }
+}
+
+@media only screen and (max-width: 515px) {
+  .trial_tip > .trial_text {
+    max-width: 320px;
+  }
+  #del {
+    margin-right: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .trial_tip > .trial_text {
+    max-width: 270px;
+  }
 }
