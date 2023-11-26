@@ -14,9 +14,13 @@
   <body>
     <div class="wrapper">
       <!-- navigation-bar -->
-      <nav>
-        <div class="logo">
-          <a href="https://www.shopify.com" target="_blank">
+      <nav role="navigation">
+        <div class="logo" aria-label="Shopify Logo">
+          <a
+            href="https://www.shopify.com"
+            target="_blank"
+            aria-label="Shopif Logo"
+          >
             <svg
               width="26"
               height="30"
@@ -24,6 +28,7 @@
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
+              <title>Shopify Logo Image</title>
               <path
                 d="M17.5094 3.42124C17.5094 3.42124 17.1804 3.51558 16.6398 3.68066C16.5458 3.37407 16.4048 3.02032 16.2168 2.64298C15.6057 1.46379 14.6891 0.827035 13.608 0.827035C13.5375 0.827035 13.467 0.827035 13.373 0.850619C13.3495 0.803451 13.3025 0.779868 13.279 0.7327C12.8089 0.213859 12.1978 -0.0219779 11.4693 0.00160577C10.0591 0.0487732 8.64896 1.06287 7.52083 2.87882C6.72174 4.15234 6.11068 5.75603 5.94616 7.00596C4.32448 7.50122 3.19635 7.85498 3.17285 7.87856C2.35026 8.13798 2.32676 8.16156 2.23275 8.93983C2.16224 9.52942 0 26.1323 0 26.1323L17.768 29.2218V3.39766C17.6269 3.39766 17.5564 3.42124 17.5094 3.42124ZM13.3965 4.69476C12.4564 4.97776 11.4223 5.30794 10.4116 5.61452C10.6937 4.50609 11.2577 3.39766 11.9158 2.66656C12.1743 2.40714 12.5269 2.10055 12.9264 1.91188C13.326 2.7609 13.42 3.9165 13.3965 4.69476ZM11.4693 0.968537C11.7983 0.968537 12.0803 1.03929 12.3154 1.18079C11.9393 1.36946 11.5633 1.67605 11.2107 2.0298C10.3176 2.99673 9.63606 4.50609 9.35403 5.9447C8.50794 6.20412 7.66185 6.46354 6.88626 6.69937C7.40332 4.43534 9.30703 1.0157 11.4693 0.968537ZM8.74297 13.9396C8.83698 15.4489 12.8089 15.7791 13.0439 19.3402C13.2085 22.1467 11.5633 24.057 9.18952 24.1985C6.3222 24.3871 4.74752 22.6891 4.74752 22.6891L5.35859 20.0949C5.35859 20.0949 6.93327 21.2977 8.20241 21.2033C9.025 21.1562 9.33053 20.4722 9.30703 20.0006C9.18952 18.0195 5.94616 18.1375 5.73463 14.8829C5.54661 12.1472 7.33281 9.38791 11.2812 9.12849C12.8089 9.03416 13.5845 9.4115 13.5845 9.4115L12.6914 12.8075C12.6914 12.8075 11.6808 12.3359 10.4822 12.4302C8.74297 12.5481 8.71946 13.6566 8.74297 13.9396ZM14.3366 4.41176C14.3366 3.70424 14.2426 2.69015 13.9135 1.84113C14.9947 2.05339 15.5117 3.25616 15.7467 3.98725C15.3237 4.10517 14.8536 4.24667 14.3366 4.41176Z"
                 fill="white"
@@ -77,8 +82,13 @@
           </a>
         </div>
         <div class="search_box">
-          <input type="text" placeholder="Search" />
+          <input
+            type="text"
+            placeholder="Search"
+            aria-labelledby="search-input"
+          />
           <svg
+            role="button"
             class="search_icon"
             xmlns="http://www.w3.org/2000/svg"
             width="15"
@@ -95,7 +105,7 @@
           </svg>
         </div>
         <div class="notifications">
-          <div class="notifications_bell" tabindex="0">
+          <div class="notifications_bell" tabindex="0" role="button">
             <svg
               width="22"
               height="22"
@@ -111,7 +121,7 @@
               />
             </svg>
           </div>
-          <div class="login_info" tabindex="0">
+          <div class="login_info" tabindex="0" role="button">
             <div class="login_name">
               <p>Davii Collection</p>
               <div class="login_logo">DC</div>
@@ -122,7 +132,7 @@
           </div>
         </div>
         <!-- notifications_bell-click-box -->
-        <div class="notify">
+        <div class="notify" role="alert">
           <div class="notify_label">
             <div>Alerts</div>
             <div class="notify_buttons">
@@ -156,6 +166,7 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <title>Shopify Logo text</title>
                   <path
                     d="M10.2803 6.03033C10.5732 5.73744 10.5732 5.26256 10.2803 4.96967C9.98744 4.67678 9.51256 4.67678 9.21967 4.96967L6.25 7.93934L5.03033 6.71967C4.73744 6.42678 4.26256 6.42678 3.96967 6.71967C3.67678 7.01256 3.67678 7.48744 3.96967 7.78033L5.71967 9.53033C6.01256 9.82322 6.48744 9.82322 6.78033 9.53033L10.2803 6.03033Z"
                     fill="#616161"
@@ -177,7 +188,7 @@
           </div>
         </div>
         <!-- login-click-box -->
-        <div class="login_dropdwn">
+        <div class="login_dropdwn" role="alert">
           <div class="login_details">
             <div class="login_davii">
               <div class="login_logo_mobile">DC</div>
@@ -216,7 +227,7 @@
                 fill="#303030"
               />
             </svg>
-            <p class="login_store">All Stores</p>
+            <p class="login_store" role="link">All Stores</p>
           </div>
           <div class="stroke_line"></div>
           <div class="more_nav">
@@ -254,14 +265,15 @@
         </div>
       </nav>
       <!-- hero-section -->
-      <main class="hero-layout">
+      <main class="hero-layout" role="main">
         <div class="trial_tip">
           <div class="trial_text">
             Extend your trial for $1/month for 3 months on select plans.
           </div>
           <div class="trial_btn_flex">
-            <button id="plan">Select a Plan</button>
+            <button id="plan" role="link">Select a Plan</button>
             <svg
+              role="button"
               tabindex="0"
               id="del"
               width="20"
@@ -285,6 +297,7 @@
               </p>
             </div>
             <svg
+              role="button"
               tabindex="0"
               id="toggle_expand"
               width="25"
@@ -310,10 +323,14 @@
             </div>
           </div>
           <!-- option-fields -->
-          <div class="option_fields_general">
-            <div class="option1_wrapper add_bg">
+          <div
+            class="option_fields_general"
+            role="listbox"
+            aria-label="Option2"
+          >
+            <div class="option1_wrapper add_bg" role="option">
               <div class="option_1_index">
-                <div class="svg_input">
+                <div class="svg_input" arial-label="option2">
                   <svg
                     class="initial_hov"
                     width="24"
@@ -382,9 +399,9 @@
               </div>
             </div>
             <!-- option2 -->
-            <div class="option1_wrapper">
+            <div class="option1_wrapper" role="option">
               <div class="option_1_index">
-                <div class="svg_input">
+                <div class="svg_input" arial-label="option2">
                   <svg
                     class="initial_hov"
                     width="24"
@@ -454,9 +471,9 @@
               </div>
             </div>
             <!-- option3 -->
-            <div class="option1_wrapper">
+            <div class="option1_wrapper" role="option">
               <div class="option_1_index">
-                <div class="svg_input">
+                <div class="svg_input" arial-label="option4">
                   <svg
                     class="initial_hov"
                     width="24"
@@ -525,9 +542,9 @@
               </div>
             </div>
             <!-- option4 -->
-            <div class="option1_wrapper">
+            <div class="option1_wrapper" role="option">
               <div class="option_1_index">
-                <div class="svg_input">
+                <div class="svg_input" arial-label="option4">
                   <svg
                     class="initial_hov"
                     width="24"
@@ -597,9 +614,9 @@
             </div>
             <!-- option5 -->
 
-            <div class="option1_wrapper">
+            <div class="option1_wrapper" role="option">
               <div class="option_1_index">
-                <div class="svg_input">
+                <div class="svg_input" arial-label="option5">
                   <svg
                     class="initial_hov"
                     width="24"

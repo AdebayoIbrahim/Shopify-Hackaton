@@ -1,9 +1,18 @@
 const toggleExpandBtn = document.querySelector("#toggle_expand");
 const generalOptions = document.querySelector(".option_fields_general");
 
-toggleExpandBtn.addEventListener("click", () => {
+function toggleFunc() {
   toggleExpandBtn.classList.toggle("rotate_toggle");
   generalOptions.classList.toggle("toggle_display");
+}
+toggleExpandBtn.addEventListener("click", () => {
+  toggleFunc();
+});
+
+toggleExpandBtn.addEventListener("keydown", (e) => {
+  if (e.key == "Enter") {
+    toggleFunc();
+  }
 });
 
 //attributes to swir=tch-to-svg-path
@@ -104,43 +113,53 @@ function animationEndHandler(rolling_svg, circle, roll_path, isClicked) {
   }
 }
 //select all svg inputs
+
+function optionCheck(e) {
+  let isClicked = false;
+  const rolling_svg = e.currentTarget.querySelector(".rolling_svg");
+  const initial_hov = e.currentTarget.querySelector(".initial_hov");
+  const roll_path = rolling_svg.querySelector("#roll_change");
+
+  const circle = rolling_svg.querySelector("#circle");
+  rolling_svg.classList.contains("scale") &&
+    rolling_svg.classList.remove("scale");
+  rolling_svg.classList.toggle("roll");
+  initial_hov.classList.toggle("fade_in");
+
+  statusProgress == -1 && (statusProgress = 1);
+  // Remove the event listener before adding it again
+  rolling_svg.removeEventListener("animationend", animationEndHandler);
+  // Add the animationend event listener
+  rolling_svg.addEventListener(
+    "animationend",
+    () => {
+      animationEndHandler(rolling_svg, circle, roll_path, isClicked);
+    },
+    { once: true }
+  );
+  if (rolling_svg.classList.contains("roll")) {
+    resetAttributes(roll_path, circle);
+    isClicked = true;
+  } else {
+    isClicked = false;
+    i -= 20;
+    statusProgress -= 1;
+    progress_status.style.width = statusProgress * 20 + "%";
+    countStatus.innerText = statusProgress;
+
+    console.log("Decrement :", i);
+  }
+}
+
 const svg_input = document.querySelectorAll(".svg_input");
 svg_input.forEach((svg_input) => {
-  svg_input.addEventListener("click", (e) => {
-    let isClicked = false;
-    const rolling_svg = e.currentTarget.querySelector(".rolling_svg");
-    const initial_hov = e.currentTarget.querySelector(".initial_hov");
-    const roll_path = rolling_svg.querySelector("#roll_change");
-
-    const circle = rolling_svg.querySelector("#circle");
-    rolling_svg.classList.contains("scale") &&
-      rolling_svg.classList.remove("scale");
-    rolling_svg.classList.toggle("roll");
-    initial_hov.classList.toggle("fade_in");
-
-    statusProgress == -1 && (statusProgress = 1);
-    // Remove the event listener before adding it again
-    rolling_svg.removeEventListener("animationend", animationEndHandler);
-    // Add the animationend event listener
-    rolling_svg.addEventListener(
-      "animationend",
-      () => {
-        animationEndHandler(rolling_svg, circle, roll_path, isClicked);
-      },
-      { once: true }
-    );
-    if (rolling_svg.classList.contains("roll")) {
-      resetAttributes(roll_path, circle);
-      isClicked = true;
-    } else {
-      isClicked = false;
-      i -= 20;
-      statusProgress -= 1;
-      progress_status.style.width = statusProgress * 20 + "%";
-      countStatus.innerText = statusProgress;
-
-      console.log("Decrement :", i);
+  svg_input.addEventListener("keydown", (e) => {
+    if (e.key == "Enter") {
+      optionCheck(e);
     }
+  });
+  svg_input.addEventListener("click", (e) => {
+    optionCheck(e);
   });
 });
 
@@ -161,15 +180,28 @@ option1_wrapper.forEach((wrapper) => {
 const notifyBell = document.querySelector(".notifications_bell");
 const notifyBar = document.querySelector(".notify");
 notifyBell.addEventListener("click", () => {
-  notifyBar.classList.toggle("notifyShow");
+  handleNotify();
 });
+notifyBell.addEventListener("keydown", (e) => {
+  if (e.key == "Enter") {
+    handleNotify();
+  }
+});
+function handleNotify() {
+  notifyBar.classList.toggle("notifyShow");
+}
 
 // login-dropdown
-const login_dropdwn = document.querySelector(".login_dropdwn");
 const login_info = document.querySelector(".login_info");
-login_info.addEventListener("click", () => {
-  // console.log(login_dropdwn);
+const login_dropdwn = document.querySelector(".login_dropdwn");
+const toggleLoginDropdown = () => {
   login_dropdwn.classList.toggle("login_drpdnn_show");
+};
+login_info.addEventListener("click", toggleLoginDropdown);
+login_info.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    toggleLoginDropdown();
+  }
 });
 
 // all-stores
@@ -189,6 +221,11 @@ const trial_tip = document.querySelector(".trial_tip");
 del.onclick = function () {
   trial_tip.style.display = "none";
 };
+del.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    trial_tip.style.display = "none";
+  }
+});
 
 const setTab = document.querySelectorAll(".initial_hov");
 setTab.forEach((tabindex) => {
